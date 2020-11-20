@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main_block">
+
+    </div>
+
+    
+    <script>
+function sahmattaxtasi(){
+    let mainBlock = document.querySelector(".main_block");
+    let block;
+    let flag = true;
+
+    for (i=0; i<8; i++) {
+        for (j=0 ; j<8 ; j++) {
+            if (j==0) flag = !flag;
+            block = document.createElement("div");
+
+            if (flag) block.className = ("block black");
+            else block.className = ("block white");
+
+            mainBlock.appendChild(block);
+            flag = !flag;
+
+
+        }
+    }
+
+}
+
+    sahmattaxtasi ();
+
+
+
+    </script>
+</body>
+</html>
